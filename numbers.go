@@ -86,6 +86,15 @@ func ValidateNumberFormat(n string) (bool, error) {
 	return matched, err
 }
 
+// GetNumberData return data about VAT
+func GetNumberData(n string) (*ViesResponse, error) {
+	r, err := Lookup(n)
+	if err != nil {
+		return nil, err
+	}
+	return r, nil
+}
+
 // ValidateNumberExistence validates a VAT number by its existence using the VIES VAT API (using SOAP)
 func ValidateNumberExistence(n string) (bool, error) {
 	r, err := Lookup(n)
