@@ -1,3 +1,3 @@
-module github.com/dannyvankooten/vat
+module github.com/Clasyc/vat
 
 go 1.14
